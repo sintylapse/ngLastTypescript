@@ -1,0 +1,11 @@
+ul{
+    padding-left: 0;
+    max-width: 400px;
+}
+ul li{
+    padding: 10px;
+    overflow: hidden;
+    list-style: none;
+    margin-bottom: 20px;
+    border: 1px solid #c5c5c5;
+}

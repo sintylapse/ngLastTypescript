@@ -1,0 +1,24 @@
+.container{
+    width: 100%;
+    max-width: 1140px;
+    padding: 0px 15px;
+    font-family: sans-serif;
+}
+fieldset{
+    margin-top: 40px;
+    border: 0;
+    padding: 0;
+}
+.btn{
+    padding: 10px;
+    background: mediumslateblue;
+    text-transform: uppercase;
+    border: 0;
+    color: white;
+    margin-left: 0;
+    cursor: pointer;
+}
+.btn-delete{
+    background: #ff3838;
+    float: right;
+}
