@@ -2,16 +2,9 @@
     <h1>{{title}}</h1>
 
     <fieldset>
-        <input type="text" placeholder="What need to do?" #titleInput />
+        <input type="text" placeholder="What need to do?" (keyup.enter)="addTodo(titleInput)" #titleInput />
         <button class="btn" (click)="addTodo(titleInput)">Добавить</button>
     </fieldset>
-    <fieldset *ngIf="todos.length > 0">
-        <ul>
-            <li *ngFor="let todo of todos">
-                <input type="checkbox" />
-                <span class="todo-text">{{todo}}</span>
-                <button class="btn btn-delete">Удалить</button>
-            </li>
-        </ul>
-    </fieldset>
+    <todo-list [todos]="todos"></todo-list>
+
 </div>

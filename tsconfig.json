@@ -11,7 +11,7 @@
     },
     "filesGlob": [
         "./typings/**/*.ts",
-        "./app/*.ts"
+        "./app/**/*.ts"
     ],
     "files": [
         "./typings/globals/core-js/index.d.ts",
@@ -19,7 +19,8 @@
         "./typings/globals/node/index.d.ts",
         "./typings/index.d.ts",
         "./app/app.component.ts",
-        "./app/main.ts"
+        "./app/main.ts",
+        "./app/todo/todo-list.component.ts"
     ],
     "atom": {
         "rewriteTsconfig": true

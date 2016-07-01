@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {TodoListComponent} from './todo/todo-list.component'
 
 @Component({
   selector: 'todo-app',
   templateUrl: './app/app.components.html',
-  styleUrls: ['./app/app.components.css']
+  styleUrls: ['./app/app.components.css'],
+  directives: [TodoListComponent]
 })
 
 export class AppComponent {
@@ -14,10 +16,10 @@ export class AppComponent {
         this.title = 'Angular 2 ToDo';
         this.todos = []
     }
-    addTodo(title: any){
-        if (title.value !== '') {
-            this.todos.push(title.value)
-            title.value = ''
+    addTodo(event: any){
+        if (event.value !== '') {
+            this.todos.push(event.value)
+            event.value = ''
         }
     }
 }

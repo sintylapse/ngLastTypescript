@@ -9,22 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var todo_list_component_1 = require('./todo/todo-list.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Angular 2 ToDo';
         this.todos = [];
     }
-    AppComponent.prototype.addTodo = function (title) {
-        if (title.value !== '') {
-            this.todos.push(title.value);
-            title.value = '';
+    AppComponent.prototype.addTodo = function (event) {
+        if (event.value !== '') {
+            this.todos.push(event.value);
+            event.value = '';
         }
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'todo-app',
             templateUrl: './app/app.components.html',
-            styleUrls: ['./app/app.components.css']
+            styleUrls: ['./app/app.components.css'],
+            directives: [todo_list_component_1.TodoListComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
