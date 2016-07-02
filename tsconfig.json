@@ -20,6 +20,8 @@
         "./typings/index.d.ts",
         "./app/app.component.ts",
         "./app/main.ts",
+        "./app/todo/item/todo-item.component.ts",
+        "./app/todo/item/todo.ts",
         "./app/todo/todo-list.component.ts"
     ],
     "atom": {

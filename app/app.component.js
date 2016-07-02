@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var todo_list_component_1 = require('./todo/todo-list.component');
+var todo_1 = require('./todo/item/todo');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Angular 2 ToDo';
@@ -17,7 +18,7 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.addTodo = function (event) {
         if (event.value !== '') {
-            this.todos.push(event.value);
+            this.todos.push(new todo_1.Todo(event.value));
             event.value = '';
         }
     };
